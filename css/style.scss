@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+// 定義
+
+$keyC: #dd6600;
+$subC: darken($keyC, 25%);
+$baseC: lighten($keyC, 50%);
+
 // 大見出し
 
 .item-list {
@@ -11,10 +17,10 @@
     padding: 25px 0;
     margin-bottom: 40px;
     background: url("../images/left.png") 0 0 no-repeat,
-      url("../images/right.png") right 0 no-repeat, #ffeddd;
+      url("../images/right.png") right 0 no-repeat, $baseC;
     background-size: contain;
     font-size: 138%;
-    color: #5e2b00;
+    color: $subC;
     font-weight: bold;
     font-family: MS mincho;
     text-align: center;
@@ -30,17 +36,17 @@
       position: absolute;
       top: 100%;
       border: 5px solid transparent;
-      border-top: 5px solid #5e2b00;
+      border-top: 5px solid $subC;
     }
 
     &::before {
       right: 0;
-      border-left: 5px solid #5e2b00;
+      border-left: 5px solid $subC;
     }
 
     &::after {
       left: 0;
-      border-right: 5px solid #5e2b00;
+      border-right: 5px solid $subC;
     }
   }
 
@@ -65,35 +71,35 @@
 
     &-img {
       padding: 4px;
-      border: 1px solid #5e2b00;
+      border: 1px solid $subC;
     }
 
     &-link {
-      color: #5e2b00;
+      color: $subC;
       text-decoration: none;
       
       &:hover {
-        color: #dd6600;
+        color: $keyC;
       }
     }
 
     &-name {
       margin: 5px 0;
       font-size: 113%;
-      color: #5e2b00;
+      color: $subC;
       font-weight: bold;
-      
+
       &--eng {
         margin: 0;
         font-size: 75%;
-        color: #dd6600;
-        border-top: 1px dotted #5e2b00;
+        color: $keyC;
+        border-top: 1px dotted $subC;
       }
     }
 
     &-text {
       font-size: 88%;
-      color: #5e2b00;
+      color: $subC;
     }
   }
 }
