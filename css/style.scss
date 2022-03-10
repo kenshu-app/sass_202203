@@ -6,9 +6,9 @@ $keyC: #dd6600;
 $subC: darken($keyC, 25%);
 $baseC: lighten($keyC, 50%);
 
-@mixin base_font {
-  font-size: 138%;
-  color: $subC;
+@mixin base_font($fz, $clr) {
+  font-size: $fz;
+  color: $clr;
 }
 
 // 大見出し
@@ -24,9 +24,7 @@ $baseC: lighten($keyC, 50%);
     background: url("../images/left.png") 0 0 no-repeat,
       url("../images/right.png") right 0 no-repeat, $baseC;
     background-size: contain;
-    // font-size: 138%;
-    // color: $subC;
-    @include base_font;
+    @include base_font(138%, $subC);
     font-weight: bold;
     font-family: MS mincho;
     text-align: center;
@@ -91,24 +89,18 @@ $baseC: lighten($keyC, 50%);
 
     &-name {
       margin: 5px 0;
-      // font-size: 113%;
-      // color: $subC;
-      @include base_font;
+      @include base_font(113%, $subC);
       font-weight: bold;
 
       &--eng {
         margin: 0;
-        // font-size: 75%;
-        // color: $keyC;
-        @include base_font;
+        @include base_font(75%, $keyC);
         border-top: 1px dotted $subC;
       }
     }
 
     &-text {
-      // font-size: 88%;
-      // color: $subC;
-      @include base_font;
+      @include base_font(88%, $subC);
     }
   }
 }
