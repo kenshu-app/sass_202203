@@ -6,7 +6,7 @@ $keyC: #dd6600;
 $subC: darken($keyC, 25%);
 $baseC: lighten($keyC, 50%);
 
-@mixin base_font($fz, $clr) {
+@mixin base_font($fz, $clr:$subC) {
   font-size: $fz;
   color: $clr;
 }
@@ -24,7 +24,7 @@ $baseC: lighten($keyC, 50%);
     background: url("../images/left.png") 0 0 no-repeat,
       url("../images/right.png") right 0 no-repeat, $baseC;
     background-size: contain;
-    @include base_font(138%, $subC);
+    @include base_font(138%);
     font-weight: bold;
     font-family: MS mincho;
     text-align: center;
@@ -89,7 +89,7 @@ $baseC: lighten($keyC, 50%);
 
     &-name {
       margin: 5px 0;
-      @include base_font(113%, $subC);
+      @include base_font(113%);
       font-weight: bold;
 
       &--eng {
@@ -100,7 +100,7 @@ $baseC: lighten($keyC, 50%);
     }
 
     &-text {
-      @include base_font(88%, $subC);
+      @include base_font(88%);
     }
   }
 }
